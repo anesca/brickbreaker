@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Anesca Dames | BrickBreaker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+   
+</head>
+
+<body onresize="checkWindowWidth()">
+
+    <div class="overlay" id="js-flip-overlay">
+        <div class="content">
+            <img src="./flip.png" />
+            <span>Please flip your phone to play the game</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1></h1>
+    </div>
+
+    <div class="game-container">
+        <div style="display: none;">
+            <img id="js-bg-image" src="./background.jpg">
+        </div>
+        <canvas id="js-canvas-breakout" width="480" height="320"></canvas>
+    </div>
+
+    <div class="popup overlay" id="js-popup-success">
+
+        <div class="popup-inner">
+
+            <div>
+                <img src="./success.png" />
+                <h3>Congratulations!</h3>
+                <span>You win!</span>
+
+                <button type="button" onclick="reset()">Play again?</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="popup overlay" id="js-popup-fail">
+
+        <div class="popup-inner">
+
+            <div>
+                <h3>Game over</h3>
+                <span>Sorry, you lose.</span>
+
+                <button type="button" onclick="reset()">Play again?</button>
+            </div>
+            
+        </div>
+
+    </div>
+   
+    <!-- Scripts -->
+    <script src="./scripts.js"></script>
+
+</body>
+
+</html>
